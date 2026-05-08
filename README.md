@@ -13,7 +13,7 @@
 
 ### Enterprise-style weather intelligence platform with DuckDB, anomaly detection, forecasting, and 3D atmospheric visualization
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Database](https://img.shields.io/badge/Database-DuckDB-yellow)](https://duckdb.org/)
 [![Models](https://img.shields.io/badge/Models-HuberRegressor%20%2B%20Z--Score-orange)]()
 [![Visualization](https://img.shields.io/badge/Viz-Plotly%20%2B%20Pydeck-blue)]()
@@ -252,6 +252,7 @@ Weather-Forecast-Alert-Application/
 |-- main.py                        <-- Legacy terminal application
 |-- requirements.txt               <-- Dependency set
 |-- README.md
+|-- LICENSE
 |-- .env.example                   <-- Environment template
 |
 |-- data/
@@ -302,6 +303,8 @@ pip install -r requirements.txt
 
 ### Step 4 — Configure Environment Variables
 
+Copy `.env.example` to `.env` and configure your OpenWeatherMap API key.
+
 ```env
 WEATHER_API_KEY='your_openweathermap_api_key_here'
 WEATHER_DB_PATH='data/weather_warehouse.duckdb'
@@ -327,6 +330,15 @@ streamlit run app.py
 ```powershell
 .\.venv\Scripts\streamlit.exe run app.py
 ```
+
+The application launches a full operational analytics dashboard where users can:
+
+- Fetch live weather data
+- Persist observations into DuckDB
+- Detect anomalies
+- Generate short-horizon forecasts
+- Explore 3D atmospheric layers
+- Visualize operational weather metrics
 
 ---
 
@@ -399,7 +411,15 @@ streamlit run app.py
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the
+**Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).**
+
+Commercial usage, monetization, SaaS deployment,
+or proprietary redistribution is prohibited
+without explicit written permission from the author.
+
+Full License:
+https://creativecommons.org/licenses/by-nc/4.0/
 
 ---
 
