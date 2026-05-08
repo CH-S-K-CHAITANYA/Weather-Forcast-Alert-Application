@@ -13,7 +13,7 @@
 
 ### Enterprise-style weather intelligence platform with DuckDB, anomaly detection, forecasting, and 3D atmospheric visualization
 
-[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](LICENSE)
 [![Database](https://img.shields.io/badge/Database-DuckDB-yellow)](https://duckdb.org/)
 [![Models](https://img.shields.io/badge/Models-HuberRegressor%20%2B%20Z--Score-orange)]()
 [![Visualization](https://img.shields.io/badge/Viz-Plotly%20%2B%20Pydeck-blue)]()
@@ -409,10 +409,11 @@ The application launches a full operational analytics dashboard where users can:
 
 <a id="license"></a>
 
+
 ## 📄 License
 
 This project is licensed under the
-**Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).**
+[Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE).
 
 Commercial usage, monetization, SaaS deployment,
 or proprietary redistribution is prohibited
