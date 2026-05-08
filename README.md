@@ -435,5 +435,6 @@ https://creativecommons.org/licenses/by-nc/4.0/
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CH-S-K-CHAITANYA)
 
 ⭐ If you found this project useful, consider starring the repository.
+[![GitHub stars](https://img.shields.io/github/stars/CH-S-K-CHAITANYA/Weather-Forecast-Alert-Application?style=social)](https://github.com/CH-S-K-CHAITANYA/Weather-Forecast-Alert-Application)
 
 </div>
