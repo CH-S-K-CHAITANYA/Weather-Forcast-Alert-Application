@@ -6,19 +6,22 @@
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
 <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white"/>
 <img src="https://img.shields.io/badge/Pydeck-00A8E8?style=for-the-badge&logo=mapbox&logoColor=white"/>
+<img src="https://img.shields.io/badge/Time--Series-Analytics-success?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Forecasting-HuberRegressor-orange?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Anomaly-Detection-critical?style=for-the-badge"/>
 
 <br/><br/>
 
 # 🌦️ Weather Analytics Operations Suite
 
-### Enterprise-style weather intelligence platform with DuckDB, anomaly detection, forecasting, and 3D atmospheric visualization
+### Enterprise-grade atmospheric intelligence platform featuring DuckDB warehousing, anomaly detection, predictive forecasting, operational analytics, and immersive 3D geospatial visualization
 
 [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](LICENSE)
 [![Database](https://img.shields.io/badge/Database-DuckDB-yellow)](https://duckdb.org/)
-[![Models](https://img.shields.io/badge/Models-HuberRegressor%20%2B%20Z--Score-orange)]()
+[![Analytics](https://img.shields.io/badge/Analytics-Time%20Series-blue)]()
+[![Forecasting](https://img.shields.io/badge/Forecasting-HuberRegressor-orange)]()
 [![Visualization](https://img.shields.io/badge/Viz-Plotly%20%2B%20Pydeck-blue)]()
-[![UI](https://img.shields.io/badge/UI-Streamlit-red)]()
-[![Status](https://img.shields.io/badge/Status-Active-success)]()
+[![Status](https://img.shields.io/badge/Status-Production--Style-success)]()
 
 <br/>
 
@@ -30,16 +33,22 @@
 
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
+- [Core Features](#core-features)
 - [Industry Relevance](#industry-relevance)
 - [System Architecture](#system-architecture)
+- [Operational Workflow](#operational-workflow)
 - [Tech Stack](#tech-stack)
 - [Database Schema](#database-schema)
 - [Analytics Engine](#analytics-engine)
+- [Forecasting Pipeline](#forecasting-pipeline)
 - [Visualization Layer](#visualization-layer)
+- [Dashboard Layer](#dashboard-layer)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [How to Run](#how-to-run)
+- [Screenshots & Outputs](#screenshots--outputs)
 - [Verification Performed](#verification-performed)
+- [Security & Reliability](#security--reliability)
 - [Learning Outcomes](#learning-outcomes)
 - [Future Improvements](#future-improvements)
 - [License](#license)
@@ -50,21 +59,34 @@
 
 ## 🔍 Overview
 
-The **Weather Analytics Operations Suite** is an advanced service-oriented weather intelligence platform designed to transform raw meteorological data into actionable operational insights.
+The **Weather Analytics Operations Suite** is an enterprise-style weather intelligence platform engineered to transform live atmospheric observations into actionable operational insights through analytics, forecasting, anomaly detection, and geospatial visualization.
 
-Originally upgraded from a student-level terminal forecasting application, the system now mirrors the architecture and workflow of industrial monitoring platforms used in logistics, aviation, agriculture, marine operations, and environmental analytics.
+Originally evolved from a traditional terminal-based weather forecasting utility, the system now mirrors the architecture and operational workflow of industrial environmental monitoring platforms used across logistics, aviation, utilities, marine operations, agriculture, and disaster management systems.
 
 The platform combines:
 
-- **Live OpenWeatherMap API acquisition**
+- **Live OpenWeatherMap API ingestion**
 - **DuckDB analytical time-series warehousing**
-- **Statistical anomaly detection**
+- **Operational anomaly detection**
 - **Short-horizon predictive forecasting**
-- **Plotly Graph Objects visualization**
-- **Pydeck-powered 3D atmospheric mapping**
-- **Streamlit operational dashboard UI**
+- **Plotly Graph Objects dashboard analytics**
+- **Pydeck-powered 3D atmospheric rendering**
+- **Streamlit operational monitoring UI**
+- **Historical environmental persistence**
+- **Multi-city atmospheric analytics**
 
-The application stores persistent historical weather records, performs analytical queries in milliseconds, detects abnormal atmospheric patterns, and visualizes spatial weather conditions using layered industrial-grade dashboards.
+Unlike consumer-grade weather applications that focus purely on presentation, this platform introduces persistent analytical storage, predictive intelligence, atmospheric anomaly monitoring, and recruiter-grade software architecture.
+
+The system demonstrates engineering concepts commonly used in:
+
+- Environmental intelligence platforms
+- Aviation weather systems
+- Smart city infrastructure
+- Climate analytics pipelines
+- Operational forecasting systems
+- Geospatial monitoring applications
+- Data warehousing workflows
+- Time-series analytical systems
 
 ---
 
@@ -72,26 +94,83 @@ The application stores persistent historical weather records, performs analytica
 
 ## ❗ Problem Statement
 
-Traditional weather applications focus only on displaying current conditions and short forecasts. They generally lack the analytical depth required for operational or industrial decision-making.
+Most weather applications focus only on displaying current weather conditions and short-term forecasts. They rarely provide the analytical depth required for operational intelligence or industrial decision-making.
 
-Common limitations include:
+This introduces several limitations:
 
 - **No Historical Persistence**  
-  Most apps discard weather history after display, preventing long-term comparisons and analytics.
+  Consumer weather applications discard atmospheric history after display, preventing long-term environmental analysis.
 
-- **No Statistical Intelligence**  
-  Temperature, pressure, and humidity changes are shown without identifying outliers or anomaly risks.
+- **No Operational Analytics**  
+  Environmental changes are shown without identifying instability, outliers, or weather-risk anomalies.
 
-- **Lack of Predictive Insight**  
-  Users must manually interpret whether environmental changes indicate incoming storms or instability.
+- **Limited Predictive Intelligence**  
+  Users manually interpret trends without analytical forecasting assistance.
 
-- **Limited Visualization**  
-  Standard 2D interfaces fail to represent atmospheric density, pressure layers, or spatial relationships.
+- **No Time-Series Warehousing**  
+  Weather records are rarely persisted for structured querying or operational reporting.
 
-- **No Operational Dashboarding**  
-  Consumer-focused UIs are not designed for analytical monitoring or multi-city operational workflows.
+- **Poor Geospatial Representation**  
+  Traditional 2D weather interfaces fail to represent atmospheric density and spatial pressure gradients.
 
-This project addresses those gaps by combining persistence, analytics, predictive modeling, and advanced visualization into a single platform.
+- **No Industrial Monitoring Dashboard**  
+  Consumer applications lack operational visibility for multi-location monitoring workflows.
+
+This project addresses those limitations by combining persistent analytical storage, anomaly intelligence, predictive forecasting, and advanced visualization into a unified atmospheric operations platform.
+
+---
+
+<a id="core-features"></a>
+
+## 🚀 Core Features
+
+### Weather Acquisition Engine
+
+- Live OpenWeatherMap API integration
+- Multi-city weather ingestion
+- Structured JSON normalization
+- Persistent environmental warehousing
+- Deterministic observation handling
+
+### DuckDB Analytical Warehousing
+
+- Time-series atmospheric persistence
+- Indexed environmental queries
+- High-performance OLAP-style analytics
+- Historical climate comparison workflows
+- Lightweight analytical storage engine
+
+### Anomaly Detection System
+
+- Rolling Z-score anomaly detection
+- Atmospheric pressure-drop analysis
+- Temperature spike identification
+- Humidity instability monitoring
+- Wind fluctuation intelligence
+
+### Predictive Forecasting
+
+- 6-hour short-horizon forecasting
+- HuberRegressor robust regression modeling
+- Cyclical feature engineering
+- Trend-based weather projection
+- Small-dataset fallback protection
+
+### Visualization & Mapping
+
+- Interactive Plotly analytics dashboards
+- Time-series atmospheric charts
+- Forecast overlays and confidence trends
+- 3D atmospheric rendering using Pydeck
+- Spatial weather intensity visualization
+
+### Operational Dashboard
+
+- Streamlit monitoring interface
+- Multi-city operational analytics
+- Atmospheric monitoring workspace
+- Recruiter-grade SaaS-inspired UI
+- Real-time analytical visualization
 
 ---
 
@@ -99,20 +178,20 @@ This project addresses those gaps by combining persistence, analytics, predictiv
 
 ## 🏭 Industry Relevance
 
-| Industry | Real-World Use Case | Equivalent Systems |
+| Industry | Operational Use Case | Equivalent Enterprise Systems |
 |---|---|---|
-| **Agriculture** | Monitor rainfall, humidity, and pressure anomalies for crop planning | Precision farming analytics platforms |
-| **Aviation** | Detect sudden pressure changes and storm-risk indicators | Aviation weather intelligence systems |
-| **Logistics & Shipping** | Track environmental conditions across operational regions | Fleet weather monitoring platforms |
-| **Energy & Utilities** | Forecast weather-driven operational disruptions | Utility forecasting dashboards |
-| **Smart Cities** | Monitor atmospheric conditions and urban climate patterns | Urban environmental monitoring systems |
-| **Disaster Management** | Identify rapid atmospheric instability before severe weather events | Early warning analytics systems |
-| **Research & Academia** | Time-series atmospheric analysis and anomaly modeling | Environmental data science platforms |
+| **Agriculture** | Rainfall and humidity intelligence for crop planning | Precision farming analytics |
+| **Aviation** | Atmospheric pressure instability monitoring | Aviation weather intelligence systems |
+| **Logistics & Shipping** | Weather-driven operational planning | Fleet environmental monitoring |
+| **Energy & Utilities** | Environmental disruption forecasting | Utility forecasting platforms |
+| **Smart Cities** | Urban atmospheric monitoring | Climate intelligence systems |
+| **Disaster Management** | Early instability detection | Emergency alert analytics |
+| **Research & Academia** | Time-series atmospheric analysis | Environmental data science platforms |
 
-The workflow mirrors modern operational pipelines:
+The operational workflow mirrors modern weather intelligence systems:
 
 ```text
-API Acquisition → Time-Series Storage → Analytics → Forecasting → Dashboard Visualization
+API Acquisition → Time-Series Warehousing → Analytics → Forecasting → Dashboard Visualization
 ```
 
 ---
@@ -122,33 +201,70 @@ API Acquisition → Time-Series Storage → Analytics → Forecasting → Dashbo
 ## 🏗️ System Architecture
 
 ```text
-+-----------------------------------------------------------+
-|                      INPUT LAYER                          |
-|          OpenWeatherMap API (Current & Forecast)          |
-+---------------------------+-------------------------------+
-                            |
-                            v
-+-----------------------------------------------------------+
-|                   SERVICE-ORIENTED ENGINE                 |
-| * Data Normalization      * Deterministic ID Generation   |
-| * DuckDB Persistence      * Multi-city Handling           |
-+---------------------------+-------------------------------+
-                            |
-                            v
-+-----------------------------------------------------------+
-|                   ANALYTICS ENGINE                        |
-|                                                           |
-| [ ANOMALY DETECTION ]        [ PREDICTIVE MODEL ]         |
-|  - Rolling Z-Scores           - HuberRegressor            |
-|  - Pressure Drop logic        - 6-hour forecast           |
-+---------------------------+-------------------------------+
-                            |
-                            v
-+-----------------------------------------------------------+
-|                    OUTPUT LAYER                           |
-| * Streamlit UI            * 3D Atmospheric Map            |
-| * Anomaly Risk Logs       * weather_warehouse.duckdb      |
-+-----------------------------------------------------------+
++----------------------------------------------------------------+
+|                         INPUT LAYER                            |
+|      OpenWeatherMap API (Current Weather + Forecast Data)      |
++--------------------------------+-------------------------------+
+                                 |
+                                 v
++----------------------------------------------------------------+
+|                  INGESTION & STORAGE ENGINE                    |
+| * JSON Normalization       * Deterministic IDs                 |
+| * Multi-city Acquisition   * DuckDB Persistence                |
+| * Environmental ETL        * Historical Warehousing            |
++--------------------------------+-------------------------------+
+                                 |
+                                 v
++----------------------------------------------------------------+
+|                      ANALYTICS ENGINE                          |
+|                                                                |
+| [ ANOMALY DETECTION ]         [ FORECASTING PIPELINE ]         |
+|                                                                |
+| * Rolling Z-Scores            * HuberRegressor                 |
+| * Pressure-drop Logic         * Time-based Features            |
+| * Humidity Variance           * 6-Hour Prediction Window       |
+| * Temperature Instability     * Fallback Forecast Logic        |
++--------------------------------+-------------------------------+
+                                 |
+                                 v
++----------------------------------------------------------------+
+|                       VISUALIZATION LAYER                      |
+| * Plotly Operational Charts  * Pydeck 3D Atmospheric Maps      |
+| * Forecast Dashboards        * Environmental KPI Panels        |
++--------------------------------+-------------------------------+
+                                 |
+                                 v
++----------------------------------------------------------------+
+|                        DASHBOARD LAYER                         |
+| * Streamlit Operations UI    * Multi-city Monitoring           |
+| * Anomaly Visibility         * Historical Query Analytics      |
++----------------------------------------------------------------+
+```
+
+---
+
+<a id="operational-workflow"></a>
+
+## ⚙️ Operational Workflow
+
+```text
+1. Acquire Weather Data from API
+               ↓
+2. Normalize Atmospheric Payloads
+               ↓
+3. Persist Records into DuckDB
+               ↓
+4. Execute Historical Queries
+               ↓
+5. Run Anomaly Detection Engine
+               ↓
+6. Generate Forecast Predictions
+               ↓
+7. Build Time-Series Analytics
+               ↓
+8. Render 2D & 3D Visualizations
+               ↓
+9. Display Insights in Dashboard
 ```
 
 ---
@@ -160,13 +276,15 @@ API Acquisition → Time-Series Storage → Analytics → Forecasting → Dashbo
 | Component | Technology | Purpose |
 |---|---|---|
 | Database | DuckDB | High-performance OLAP time-series storage |
-| Backend Engine | Python 3.10+ | Core implementation and orchestration |
-| Modeling | Scikit-learn | Regression forecasting and anomaly analytics |
-| Frontend | Streamlit | Industrial operations dashboard |
-| Visualization (2D) | Plotly Graph Objects | Interactive multi-layered time-series charts |
-| Visualization (3D) | Pydeck | Atmospheric geospatial visualization |
-| Data Processing | Pandas & NumPy | Transformation and analytical processing |
+| Backend Engine | Python 3.10+ | Core orchestration and weather processing |
+| Data Processing | Pandas & NumPy | Analytical transformation workflows |
+| Forecasting | Scikit-learn | Regression forecasting models |
+| Dashboard UI | Streamlit | Operational monitoring dashboard |
+| Visualization (2D) | Plotly Graph Objects | Interactive atmospheric analytics |
+| Visualization (3D) | Pydeck | Geospatial atmospheric rendering |
 | API Integration | Requests | OpenWeatherMap acquisition |
+| Environment Config | python-dotenv | Environment-based configuration |
+| Statistical Analytics | SciPy / NumPy | Z-score anomaly calculations |
 
 ---
 
@@ -177,24 +295,36 @@ API Acquisition → Time-Series Storage → Analytics → Forecasting → Dashbo
 ### `locations`
 
 ```text
-location_id, city, country, latitude, longitude, first_seen_at, last_seen_at
+location_id, city, country, latitude, longitude,
+first_seen_at, last_seen_at
 ```
 
 ### `weather_observations`
 
 ```text
 observation_id, location_id, observed_at, acquired_at, source,
-temp_c, feels_like_c, humidity_pct, pressure_hpa, wind_speed_kph,
-wind_direction_deg, cloud_cover_pct, visibility_km, precipitation_mm,
-precipitation_probability_pct, condition_id, description, payload_json
+temp_c, feels_like_c, humidity_pct, pressure_hpa,
+wind_speed_kph, wind_direction_deg, cloud_cover_pct,
+visibility_km, precipitation_mm,
+precipitation_probability_pct,
+condition_id, description, payload_json
 ```
 
-### Indexed Queries
+### Indexed Query Strategy
 
 ```text
 idx_weather_location_time(location_id, observed_at)
 idx_weather_source_time(source, observed_at)
 ```
+
+### Warehousing Design Goals
+
+| Design Goal | Implementation |
+|---|---|
+| Fast analytical querying | DuckDB OLAP engine |
+| Historical persistence | Time-series warehousing |
+| Structured weather ETL | Deterministic normalization |
+| Operational scalability | Indexed observation retrieval |
 
 ---
 
@@ -202,21 +332,72 @@ idx_weather_source_time(source, observed_at)
 
 ## 🤖 Analytics Engine
 
-### Anomaly Detection
+### Atmospheric Anomaly Detection
 
-- Rolling Z-score anomaly detection
-- Sudden atmospheric pressure-drop analysis
+The analytics engine continuously evaluates weather records to identify statistically abnormal environmental conditions.
+
+Detection logic includes:
+
+- Rolling Z-score deviation analysis
+- Sudden pressure-drop identification
 - Temperature jump detection
-- Humidity instability analysis
-- Wind fluctuation monitoring
+- Wind volatility monitoring
+- Humidity instability scoring
 
-### Predictive Forecasting
+### Statistical Processing
 
-- 6-hour short-horizon forecasting
-- Time-based cyclical feature engineering
-- Day-cycle sine/cosine transformations
-- `HuberRegressor` robust regression modeling
-- Automatic fallback logic for small datasets
+```text
+Rolling Mean → Standard Deviation →
+Z-Score Computation → Threshold Evaluation →
+Anomaly Classification
+```
+
+### Risk Indicators
+
+| Indicator | Operational Meaning |
+|---|---|
+| Pressure Drop | Potential storm instability |
+| Humidity Spike | Rapid atmospheric saturation |
+| Wind Surge | Turbulence or weather-front activity |
+| Temperature Jump | Environmental transition anomaly |
+
+---
+
+<a id="forecasting-pipeline"></a>
+
+## 📈 Forecasting Pipeline
+
+### Predictive Modeling
+
+The forecasting subsystem uses `HuberRegressor` to generate short-horizon weather predictions resilient to outliers and noisy atmospheric datasets.
+
+### Forecasting Workflow
+
+```text
+Historical Weather →
+Feature Engineering →
+Cyclical Time Encoding →
+Regression Training →
+6-Hour Forecast Generation
+```
+
+### Feature Engineering
+
+The system generates:
+
+- Hour-based cyclical features
+- Day/night transformations
+- Atmospheric trend vectors
+- Rolling environmental averages
+
+### Forecasting Characteristics
+
+| Capability | Description |
+|---|---|
+| Forecast Horizon | 6 hours |
+| Regression Model | HuberRegressor |
+| Outlier Resistance | High |
+| Small Dataset Handling | Automatic fallback logic |
 
 ---
 
@@ -224,20 +405,53 @@ idx_weather_source_time(source, observed_at)
 
 ## 📊 Visualization Layer
 
-### Main Dashboard
+### Plotly Operational Dashboards
 
-- Multi-layer Plotly Graph Objects time-series visualization
-- Temperature vs. feels-like comparisons
-- Pressure and humidity overlays
-- Forecast prediction visualization
+The platform uses Plotly Graph Objects to build layered analytical weather visualizations.
+
+Dashboard analytics include:
+
+- Temperature vs feels-like trends
+- Pressure overlays
+- Humidity analytics
+- Forecast projection lines
 - Statistical anomaly markers
+- Atmospheric variability tracking
 
 ### 3D Atmospheric Mapping
 
-- Atmospheric density visualization
-- Spatial pressure intensity mapping
-- Weather-driven column height rendering
-- Color-scaled environmental conditions
+Pydeck powers immersive atmospheric visualization through:
+
+- Spatial pressure intensity rendering
+- Weather-driven elevation columns
+- Environmental color scaling
+- Multi-city atmospheric distribution
+- Interactive geospatial exploration
+
+---
+
+<a id="dashboard-layer"></a>
+
+## 🖥️ Dashboard Layer
+
+The Streamlit dashboard acts as a centralized atmospheric operations console for analytical monitoring and environmental intelligence.
+
+### Operational Dashboard Features
+
+- Multi-city monitoring
+- Historical trend analytics
+- Forecast comparison dashboards
+- Atmospheric anomaly visibility
+- Real-time environmental KPIs
+- Geospatial atmospheric intelligence
+
+### UI Design Philosophy
+
+- Dark SaaS-inspired interface
+- Enterprise operational layout
+- Recruiter-grade visual hierarchy
+- Real-time analytical presentation
+- Dashboard-driven workflow orchestration
 
 ---
 
@@ -248,18 +462,18 @@ idx_weather_source_time(source, observed_at)
 ```text
 Weather-Forecast-Alert-Application/
 |
-|-- app.py                         <-- Streamlit operations dashboard
-|-- main.py                        <-- Legacy terminal application
-|-- requirements.txt               <-- Dependency set
+|-- app.py
+|-- main.py
+|-- requirements.txt
 |-- README.md
 |-- LICENSE
-|-- .env.example                   <-- Environment template
+|-- .env.example
 |
 |-- data/
-|   |-- weather_warehouse.duckdb   <-- Runtime DuckDB database
+|   |-- weather_warehouse.duckdb
 |   |-- simulation.py
 |   |-- sample_current_weather.json
-|   |-- sample_forecast.json
+|   `-- sample_forecast.json
 |
 |-- src/
 |   |-- weather_suite/
@@ -267,12 +481,21 @@ Weather-Forecast-Alert-Application/
 |   |   |-- config.py
 |   |   |-- engine.py
 |   |   |-- analytics.py
-|   |   |-- visualizations.py
+|   |   `-- visualizations.py
 |   |
 |   |-- api_handler.py
 |   |-- data_parser.py
 |   |-- alert_system.py
-|   |-- visualizer.py
+|   `-- visualizer.py
+|
+|-- screenshots/
+|   |-- dashboard.png
+|   |-- anomalies.png
+|   `-- atmospheric_map.png
+|
+`-- docs/
+    |-- architecture.md
+    `-- forecasting_pipeline.md
 ```
 
 ---
@@ -303,7 +526,13 @@ pip install -r requirements.txt
 
 ### Step 4 — Configure Environment Variables
 
-Copy `.env.example` to `.env` and configure your OpenWeatherMap API key.
+Copy `.env.example` into `.env`
+
+```powershell
+copy .env.example .env
+```
+
+Configure operational environment settings:
 
 ```env
 WEATHER_API_KEY='your_openweathermap_api_key_here'
@@ -325,20 +554,66 @@ ANOMALY_ROLLING_WINDOW='8'
 streamlit run app.py
 ```
 
-### Run Using Local Virtual Environment
+### Run via Local Virtual Environment
 
 ```powershell
 .\.venv\Scripts\streamlit.exe run app.py
 ```
 
-The application launches a full operational analytics dashboard where users can:
+### Execute Legacy CLI Weather Workflow
 
-- Fetch live weather data
-- Persist observations into DuckDB
+```powershell
+python main.py
+```
+
+The dashboard enables users to:
+
+- Fetch live atmospheric data
+- Persist weather observations
 - Detect anomalies
-- Generate short-horizon forecasts
-- Explore 3D atmospheric layers
-- Visualize operational weather metrics
+- Generate weather forecasts
+- Explore 3D atmospheric maps
+- Analyze environmental trends
+
+---
+
+<a id="screenshots--outputs"></a>
+
+## 🖼️ Screenshots & Outputs
+
+<div align="center">
+
+### Operational Dashboard
+
+<img src="screenshots/dashboard.png" width="90%"/>
+
+<br/><br/>
+
+### Atmospheric Anomaly Analytics
+
+<img src="screenshots/anomalies.png" width="90%"/>
+
+<br/><br/>
+
+### 3D Atmospheric Visualization
+
+<img src="screenshots/atmospheric_map.png" width="90%"/>
+
+</div>
+
+### Example Operational Metrics
+
+```text
+🌦️ Weather Operations Summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cities Monitored        : 12
+Anomalies Detected      : 4
+Forecast Horizon        : 6 Hours
+Database Records        : 18,420
+Top Pressure Drop       : -12.8 hPa
+Atmospheric Risk Level  : MODERATE
+```
 
 ---
 
@@ -346,14 +621,39 @@ The application launches a full operational analytics dashboard where users can:
 
 ## ✅ Verification Performed
 
-- Python modules compiled using `py_compile`
-- Dependencies aligned with `requirements.txt`
-- `pip check` executed successfully
+- Python modules validated successfully
+- `py_compile` execution completed
 - DuckDB persistence smoke tests passed
-- Historical weather queries validated
-- Forecast generation verified
-- Streamlit application launched successfully
-- Local HTTP response confirmed with status `200`
+- Time-series analytical queries validated
+- Forecast generation workflow verified
+- Streamlit dashboard launched successfully
+- OpenWeatherMap API integration tested
+- Local HTTP response returned status `200`
+- Plotly visualizations rendered successfully
+- Pydeck geospatial layers validated
+- Historical weather persistence confirmed
+
+---
+
+<a id="security--reliability"></a>
+
+## 🔐 Security & Reliability
+
+### Operational Safety Controls
+
+- Environment-based API credential isolation
+- Deterministic weather record handling
+- Structured JSON payload normalization
+- Safe fallback forecasting workflows
+- Robust anomaly threshold enforcement
+
+### Recommended Best Practices
+
+- Never commit `.env` credentials
+- Rotate API keys periodically
+- Archive long-term weather datasets
+- Monitor DuckDB storage growth
+- Validate atmospheric payload integrity
 
 ---
 
@@ -364,29 +664,37 @@ The application launches a full operational analytics dashboard where users can:
 ### Data Engineering
 
 - DuckDB analytical warehousing
-- Persistent time-series storage
-- Structured environmental data modeling
-- Indexed analytical querying
+- Environmental ETL pipelines
+- Indexed time-series querying
+- Persistent atmospheric storage
 
 ### Machine Learning & Analytics
 
-- Robust regression forecasting
+- Regression forecasting workflows
 - Statistical anomaly detection
 - Time-based feature engineering
-- Atmospheric pattern analysis
+- Atmospheric intelligence modeling
 
 ### Visualization Engineering
 
-- Plotly Graph Objects dashboarding
-- 3D Pydeck geospatial rendering
-- Multi-layer operational visualization
+- Plotly operational dashboarding
+- Pydeck geospatial rendering
+- Multi-layer atmospheric visualization
+- Real-time analytical dashboards
 
 ### Software Architecture
 
-- Service-oriented application structure
-- MVC-inspired separation of concerns
-- Streamlit operational UI development
+- Service-oriented design patterns
+- Modular analytics architecture
+- Streamlit operations dashboarding
 - Environment-driven configuration management
+
+### Operational Intelligence
+
+- Atmospheric monitoring workflows
+- Forecast interpretation systems
+- Environmental KPI analytics
+- Geospatial operational visualization
 
 ---
 
@@ -394,32 +702,33 @@ The application launches a full operational analytics dashboard where users can:
 
 ## 🔮 Future Improvements
 
-- [ ] Real-time weather streaming pipeline
-- [ ] Kafka-based ingestion architecture
-- [ ] Multi-region atmospheric clustering
-- [ ] LSTM forecasting for temporal weather modeling
-- [ ] Severe weather alert notifications
+- [ ] Kafka-based streaming ingestion
+- [ ] Real-time atmospheric event processing
+- [ ] LSTM forecasting architecture
+- [ ] FastAPI REST service layer
 - [ ] Docker containerization
-- [ ] FastAPI REST endpoints
-- [ ] Historical climate trend analytics
-- [ ] Satellite imagery overlay integration
 - [ ] Kubernetes deployment support
+- [ ] Multi-region weather clustering
+- [ ] Severe weather push notifications
+- [ ] Historical climate trend analytics
+- [ ] Satellite imagery integration
+- [ ] Automated anomaly alerting engine
+- [ ] Distributed environmental warehousing
 
 ---
 
 <a id="license"></a>
 
-
 ## 📄 License
 
-This project is licensed under the
+This project is licensed under the  
 [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE).
 
-Commercial usage, monetization, SaaS deployment,
-or proprietary redistribution is prohibited
+Commercial usage, monetization, SaaS deployment,  
+or proprietary redistribution is prohibited  
 without explicit written permission from the author.
 
-Full License:
+Full License:  
 https://creativecommons.org/licenses/by-nc/4.0/
 
 ---
@@ -434,9 +743,12 @@ https://creativecommons.org/licenses/by-nc/4.0/
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CH-S-K-CHAITANYA)
 
+[![GitHub stars](https://img.shields.io/github/stars/CH-S-K-CHAITANYA/Weather-Forecast-Alert-Application?style=social)](https://github.com/CH-S-K-CHAITANYA/Weather-Forecast-Alert-Application)
+
+<br/>
 
 ⭐ If you found this project useful, consider starring the repository.
 
-
-
 </div>
+
+---
