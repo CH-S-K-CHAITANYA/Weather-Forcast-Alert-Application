@@ -585,19 +585,19 @@ The dashboard enables users to:
 
 ### Operational Dashboard
 
-<img src="screenshots/dashboard.png" width="90%"/>
+<img src="images/dashboard.png" width="90%"/>
 
 <br/><br/>
 
 ### Atmospheric Anomaly Analytics
 
-<img src="screenshots/anomalies.png" width="90%"/>
+<img src="images/anomalies.png" width="90%"/>
 
 <br/><br/>
 
 ### 3D Atmospheric Visualization
 
-<img src="screenshots/atmospheric_map.png" width="90%"/>
+<img src="images/atmospheric_map.png" width="90%"/>
 
 </div>
 
